@@ -175,12 +175,6 @@ Custom wordlists were created to simulate credential attacks:
 
 ---
 
-## Disclaimer
-
-This project was conducted in a controlled lab environment for educational purposes only.
-
----
-
 ## About this Project
 
 This project was developed as part of a cybersecurity challenge from the DIO (Digital Innovation One) platform.
