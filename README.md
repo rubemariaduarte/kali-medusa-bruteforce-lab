@@ -155,7 +155,7 @@ This demonstrates:
 
 Custom wordlists were created to simulate credential attacks:
 
-![Wordlist Creation](images/wordlist_creation.png)
+![Wordlist Creation](image/wordlist_creation.png)
 
 ---
 
