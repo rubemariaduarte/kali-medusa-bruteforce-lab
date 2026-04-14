@@ -157,7 +157,6 @@ Custom wordlists were created to simulate credential attacks:
 
 ![Wordlist Creation](image/wordlist_creation.png)
 
-Custom wordlists were used to simulate weak password patterns commonly found in poorly secured environments.
 
 ---
 
