@@ -88,11 +88,7 @@ echo -e "password\n123456\nmsfadmin\nwelcome123" > passwords.txt
 
 #### Wordlist Creation
 
-Custom wordlists were created to simulate credential attacks:
-
 ![Wordlist Creation](image/wordlist_creation.png)
-
-
 
 ## 3. SMB Password Spraying (Medusa)
 
