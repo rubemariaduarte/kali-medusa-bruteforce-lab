@@ -141,6 +141,20 @@ This demonstrates:
 * Lack of rate limiting
 * Weak password policies
 
+### Evidence
+
+#### Web Login Testing (DVWA)
+
+A login interface from DVWA was used to simulate web authentication attacks.
+
+![DVWA Login](image/dvwa_login_test.png)
+
+The test demonstrates:
+- Login request behavior
+- HTTP responses (200, 302)
+- Lack of security mechanisms such as rate limiting
+
+DVWA is intentionally vulnerable, allowing the simulation of real-world attack scenarios in a safe environment.
 
 ---
 
