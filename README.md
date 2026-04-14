@@ -56,17 +56,17 @@ This revealed multiple system users such as:
 * user
 * service
 
-## Evidence
+### Evidence
 
-### User Enumeration
+#### User Enumeration
 
 ![Enumeração SMB](image/enum4linux_result.png)
 
-### SMB Access
+#### SMB Access
 
 ![Acesso SMB](image/smb_access.png)
 
---
+
 
 ## 2. Wordlist Creation
 
@@ -78,14 +78,15 @@ Custom wordlists were created:
 echo -e "user\nmsfadmin\nservice" > users.txt
 ```
 
-## Evidence
-
 ### Passwords:
 
 ```bash
 echo -e "password\n123456\nmsfadmin\nwelcome123" > passwords.txt
 ```
-## Wordlist Creation
+
+### Evidence
+
+#### Wordlist Creation
 
 Custom wordlists were created to simulate credential attacks:
 
@@ -107,9 +108,9 @@ medusa -h 192.168.56.101 -U users.txt -P passwords.txt -M smbnt -t 2 -T 50
 * `-M smbnt` → SMB authentication module
 * `-t` / `-T` → Threads
 
-## Evidence
+### Evidence
 
-SMB Password Spraying (Medusa)
+#### SMB Password Spraying (Medusa)
 
  This demonstrates how attackers can exploit weak passwords after user enumeration:
 
@@ -125,9 +126,9 @@ smbclient -L //192.168.56.101 -U msfadmin
 
 Used to validate if credentials allow access and list available shares.
 
-## Evidence
+### Evidence
 
-## SMB Share Enumeration
+#### SMB Share Enumeration
 
  The enumeration of shares after authentication is a common step used by attackers to identify sensitive data and lateral movement opportunities.
 
