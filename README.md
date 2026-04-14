@@ -50,7 +50,7 @@ This lab simulates a common real-world scenario where attackers combine user enu
 Users were enumerated using enum4linux:
 
 ```bash
-enum4linux -a 192.168.56.102
+enum4linux -a 192.168.56.101
 ```
 
 This revealed multiple system users such as:
