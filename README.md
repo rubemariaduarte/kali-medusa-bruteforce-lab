@@ -161,7 +161,7 @@ Custom wordlists were created to simulate credential attacks:
 
  The enumeration of shares after authentication is a common step used by attackers to identify sensitive data and lateral movement opportunities.
 
- ![smbshareenumeration](image/smb_share_enumeration)
+ ![smbshare enumeration](image/smb_share_enumeration.png)
  
 ---
 
