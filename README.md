@@ -181,7 +181,9 @@ This project was conducted in a controlled lab environment for educational purpo
 
 ---
 
-## Author
-Rubemária Duarte
+## About this Project
 
+This project was developed as part of a cybersecurity challenge from the DIO (Digital Innovation One) platform.
+
+Beyond the proposed tasks, additional analysis and documentation were performed to simulate a real-world security assessment scenario.
 
