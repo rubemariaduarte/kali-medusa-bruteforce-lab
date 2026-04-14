@@ -130,7 +130,7 @@ Used to validate if credentials allow access and list available shares.
 
  ![smbshare enumeration](image/smb_share_enumeration.png)
 
----
+
 
 ## 6. Web Login Attack (DVWA)
 
