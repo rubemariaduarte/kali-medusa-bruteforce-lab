@@ -151,6 +151,12 @@ This demonstrates:
 ### SMB Access
 ![Acesso SMB](image/smb_access.png)
 
+## Wordlist Creation
+
+Custom wordlists were created to simulate credential attacks:
+
+![Wordlist Creation](images/wordlist_creation.png)
+
 ---
 
 ## Skills Demonstrated
