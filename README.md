@@ -6,27 +6,24 @@ This project demonstrates a practical security assessment using Kali Linux and M
 
 The objective is to simulate brute force attacks against different services (FTP, Web and SMB), identify weak authentication mechanisms, and propose mitigation strategies.
 
----
-
-## Objectives
+### Objectives
 
 * Understand brute force attacks in different services
 * Perform password spraying and credential testing
 * Identify exposed services and weak credentials
 * Document findings and propose security improvements
 
----
 
-## Lab Environment
+
+### Lab Environment
 
 * **Attacker Machine:** Kali Linux
 * **Target Machine:** Metasploitable 2 + DVWA
 * **Virtualization:** VirtualBox
 * **Network:** Host-Only Adapter
 
----
 
-## Methodology
+### Methodology
 
 The assessment followed these steps:
 
@@ -37,9 +34,9 @@ The assessment followed these steps:
 5. **Access Validation**
 6. **Security Analysis**
 
----
 
-## Security Insight
+
+### Security Insight
 
 This lab simulates a common real-world scenario where attackers combine user enumeration and password spraying to gain unauthorized access to internal services.
 
@@ -59,7 +56,17 @@ This revealed multiple system users such as:
 * user
 * service
 
----
+## Evidence
+
+### User Enumeration
+
+![Enumeração SMB](image/enum4linux_result.png)
+
+### SMB Access
+
+![Acesso SMB](image/smb_access.png)
+
+--
 
 ## 2. Wordlist Creation
 
@@ -71,13 +78,20 @@ Custom wordlists were created:
 echo -e "user\nmsfadmin\nservice" > users.txt
 ```
 
+## Evidence
+
 ### Passwords:
 
 ```bash
 echo -e "password\n123456\nmsfadmin\nwelcome123" > passwords.txt
 ```
+## Wordlist Creation
 
----
+Custom wordlists were created to simulate credential attacks:
+
+![Wordlist Creation](image/wordlist_creation.png)
+
+
 
 ## 3. SMB Password Spraying (Medusa)
 
@@ -93,7 +107,15 @@ medusa -h 192.168.56.101 -U users.txt -P passwords.txt -M smbnt -t 2 -T 50
 * `-M smbnt` → SMB authentication module
 * `-t` / `-T` → Threads
 
----
+## Evidence
+
+SMB Password Spraying (Medusa)
+
+ This demonstrates how attackers can exploit weak passwords after user enumeration:
+
+ ![medusa success](image/medusa_success.png)
+
+
 
 ## 4. Access Validation (SMB)
 
@@ -102,6 +124,14 @@ smbclient -L //192.168.56.101 -U msfadmin
 ```
 
 Used to validate if credentials allow access and list available shares.
+
+## Evidence
+
+## SMB Share Enumeration
+
+ The enumeration of shares after authentication is a common step used by attackers to identify sensitive data and lateral movement opportunities.
+
+ ![smbshare enumeration](image/smb_share_enumeration.png)
 
 ---
 
@@ -113,6 +143,7 @@ This demonstrates:
 
 * Lack of rate limiting
 * Weak password policies
+
 
 ---
 
@@ -133,36 +164,6 @@ This demonstrates:
 * Restrict SMB access via firewall
 * Monitor login attempts (SIEM alerts)
 
----
-
-## Evidence
-
-### User Enumeration
-
-![Enumeração SMB](image/enum4linux_result.png)
-
-### SMB Access
-
-![Acesso SMB](image/smb_access.png)
-
-## Wordlist Creation
-
-Custom wordlists were created to simulate credential attacks:
-
-![Wordlist Creation](image/wordlist_creation.png)
-
-## SMB Password Spraying (Medusa)
-
- This demonstrates how attackers can exploit weak passwords after user enumeration:
-
- ![medusa success](image/medusa_success.png)
-
-## SMB Share Enumeration
-
- The enumeration of shares after authentication is a common step used by attackers to identify sensitive data and lateral movement opportunities.
-
- ![smbshare enumeration](image/smb_share_enumeration.png)
- 
 ---
 
 ## Skills Demonstrated
