@@ -105,14 +105,6 @@ Used to validate if credentials allow access and list available shares.
 
 ---
 
-## 5. FTP Brute Force (Optional)
-
-```bash
-medusa -h 192.168.56.101 -U users.txt -P passwords.txt -M ftp
-```
-
----
-
 ## 6. Web Login Attack (DVWA)
 
 Simulated login attempts using DVWA login form.
@@ -146,9 +138,11 @@ This demonstrates:
 ## Evidence
 
 ### User Enumeration
+
 ![Enumeração SMB](image/enum4linux_result.png)
 
 ### SMB Access
+
 ![Acesso SMB](image/smb_access.png)
 
 ## Wordlist Creation
@@ -163,8 +157,12 @@ Custom wordlists were created to simulate credential attacks:
 
  ![medusa success](image/medusa_success.png)
 
+## SMB Share Enumeration
 
+ The enumeration of shares after authentication is a common step used by attackers to identify sensitive data and lateral movement opportunities.
 
+ ![smbshareenumeration](smb_share_enumeration)
+ 
 ---
 
 ## Skills Demonstrated
