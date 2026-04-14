@@ -145,7 +145,11 @@ This demonstrates:
 
 ## Evidence
 
-Screenshots available in `/images` folder.
+### User Enumeration
+![Enumeração SMB](image/enum4linux_result.png)
+
+### SMB Access
+![Acesso SMB](image/smb_access.png)
 
 ---
 
